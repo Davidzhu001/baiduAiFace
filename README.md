@@ -22,7 +22,12 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+```
+require 'baiduAiFace'
+
+api = FaceAi.new 'access_token'
+puts response = api.faceset.face.getlist 'Key': 'Value'
+```
 
 ## Development
 

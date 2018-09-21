@@ -2,6 +2,7 @@ require 'rubygems'
 require 'json'
 require 'mime/types'
 require 'rest-client'
+require "open-uri"
 require 'securerandom'
 require 'uri'
 
@@ -137,9 +138,13 @@ class FaceAi
             req.body = form.inspect
             req['Content-Length'] = req.body.size
           end
-          url = "https://aip.baidubce.com/rest/2.0/face/v3#{api}"
-            response = RestClient.post url, fields
-            response
+
+            url = "https://aip.baidubce.com/rest/2.0/face/v3#{api}"
+            uri = URI.parse(url)
+            res = Net::HTTP.post_form(uri, params)  
+
+            puts res.body
+            evel res.body
       end
     end
   end

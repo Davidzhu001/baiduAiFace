@@ -142,7 +142,7 @@ class FaceAi
           uri = URI.parse(url)
           res = Net::HTTP.post_form uri, {}
           p res.body
-          eval res.body
+          res.body
       end
     end
   end

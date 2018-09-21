@@ -141,8 +141,7 @@ class FaceAi
 
             url = "https://aip.baidubce.com/rest/3.0/face/v3#{api}"
             uri = URI.parse(url)
-            res = Net::HTTP.post_form(uri, params)  
-
+            res = Net::HTTP.post_form(uri)  
             puts res.body
             evel res.body
       end

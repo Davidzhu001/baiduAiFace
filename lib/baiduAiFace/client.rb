@@ -1,3 +1,5 @@
+require "baiduAiFace/version"
+require "baiduAiFace/client"
 require 'rubygems'
 require 'json'
 require 'mime/types'
@@ -138,11 +140,13 @@ class FaceAi
             req['Content-Length'] = req.body.size
           end
 
-          url = "https://aip.baidubce.com/rest/2.0/face/v3?#{api}"
+          url = "https://aip.baidubce.com/rest/2.0/face/v3#{api}"
+          p url
+          p fields
           uri = URI.parse(url)
-          res = Net::HTTP.post_form uri, {}
+          res = Net::HTTP.post_form uri, fields
           p res.body
-          res.body
+          eval res.body
       end
     end
   end

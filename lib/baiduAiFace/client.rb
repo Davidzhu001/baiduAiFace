@@ -1,10 +1,9 @@
 require 'rubygems'
 require 'json'
 require 'mime/types'
-require 'rest-client'
-require "open-uri"
-require 'securerandom'
+require 'net/http'
 require 'uri'
+require 'securerandom'
 
 unless Object.respond_to? :singleton_class
   class Object
@@ -139,11 +138,11 @@ class FaceAi
             req['Content-Length'] = req.body.size
           end
 
-            url = "https://aip.baidubce.com/rest/3.0/face/v3#{api}"
-            uri = URI.parse(url)
-            res = Net::HTTP.post_form(uri)  
-            puts res.body
-            evel res.body
+          url = "https://aip.baidubce.com/rest/3.0/face/v3#{api}"
+          uri = URI.parse(url)
+          res = Net::HTTP.post_form uri, {}
+          p res.body
+          eval res.body
       end
     end
   end

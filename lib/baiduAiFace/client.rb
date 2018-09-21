@@ -145,7 +145,7 @@ class FaceAi
           p fields
           uri = URI.parse(url)
           res = Net::HTTP.post_form uri, fields
-          p res.body
+          res.body.gsub! 'null', "0"
           eval res.body
       end
     end

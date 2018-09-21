@@ -138,7 +138,7 @@ class FaceAi
             req['Content-Length'] = req.body.size
           end
 
-          url = "https://aip.baidubce.com/rest/3.0/face/v3#{api}"
+          url = "https://aip.baidubce.com/rest/2.0/face/v3?#{api}"
           uri = URI.parse(url)
           res = Net::HTTP.post_form uri, {}
           p res.body

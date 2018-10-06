@@ -1,5 +1,7 @@
 language: ruby
 before_deploy:
+  - rvm 2.4.0 do gem install mime-types -v 2.6.2
+before_deploy:
   - gem install mime-types
 dist: trusty
 rvm:

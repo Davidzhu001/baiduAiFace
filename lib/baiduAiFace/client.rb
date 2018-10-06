@@ -2,6 +2,7 @@ require "baiduAiFace/version"
 require "baiduAiFace/client"
 require 'rubygems'
 require 'json'
+require 'mime/types'
 require 'net/http'
 require 'uri'
 require 'securerandom'

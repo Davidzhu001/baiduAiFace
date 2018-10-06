@@ -1,7 +1,8 @@
 PATH
   remote: .
   specs:
-    baiduAiFace (0.2.2)
+    baiduAiFace (0.2.3)
+      mime-types
 
 GEM
   remote: https://rubygems.org/

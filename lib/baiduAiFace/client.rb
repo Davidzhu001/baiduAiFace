@@ -97,6 +97,7 @@ class FaceAi
 
     '/faceset/user/add',
     '/faceset/user/update',
+    '/faceset/user/delete',
     '/faceset/face/delete',
 
     '/faceset/face/getlist',

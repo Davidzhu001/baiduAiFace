@@ -1,8 +1,8 @@
 
 lib = File.expand_path("../lib", __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require "baiduAiFace/version"
-require "baiduAiFace/client"
+require "./lib/baiduAiFace/version"
+require "./lib/baiduAiFace/client"
 
 Gem::Specification.new do |spec|
   spec.name          = "baiduAiFace"
@@ -26,7 +26,7 @@ Gem::Specification.new do |spec|
   spec.require_paths = ["lib"]
   spec.files         = Dir["{bin,lib}/**/*", "LICENSE", "README.md"]
 
-  spec.add_development_dependency "bundler", "~> 1.16"
+  spec.add_development_dependency "bundler", "~> 1.6.1"
   spec.add_development_dependency "rake", "~> 10.0"
   spec.add_development_dependency "rspec", "~> 3.0"
   spec.add_development_dependency "mime-types", "~> 3.0"

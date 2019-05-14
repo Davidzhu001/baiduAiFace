@@ -103,6 +103,7 @@ class FaceAi
 
     '/faceset/group/add',
     '/faceset/group/delete',
+    '/faceset/group/deleteuser',
     '/faceset/group/getlist'
   ]
 

@@ -29,6 +29,20 @@ require 'baiduAiFace'
 
 api = FaceAi.new 'access_token'
 puts response = api.faceset.face.getlist 'Key': 'Value'
+
+request methods 
+
+    '/faceset/user/add',  api.faceset.user.add
+    '/faceset/user/update',
+    '/faceset/user/delete',
+    '/faceset/face/delete',
+
+    '/faceset/face/getlist',
+
+    '/faceset/group/add',
+    '/faceset/group/delete',
+    '/faceset/group/deleteuser',
+    '/faceset/group/getlist'
 ```
 
 ## Development
